@@ -7,7 +7,7 @@ const AllProducts = () => {
     const productsHandler = async()=>{
             const firmId = localStorage.getItem('firmId');
         try {
-                const response = await fetch(`${API_URL}/product/${firmId}/products`);
+                const response = await fetch(`${API_URL}product/${firmId}/products`);
                 const newProductsData = await response.json();
                 setProducts(newProductsData.products);
                 console.log(newProductsData);
@@ -24,7 +24,7 @@ const AllProducts = () => {
 
     const deleteProductById = async(productId)=>{
                 try {
-                        const response = await fetch(`${API_URL}/product/${productId}`,{
+                        const response = await fetch(`${API_URL}product/${productId}`,{
                             method: 'DELETE'
                         })
                     if(response.ok){
@@ -62,7 +62,7 @@ const AllProducts = () => {
                                         <td>₹{item.price}</td>
                                     <td>
                                         {item.image && (
-                                            <img src={`${API_URL}/uploads/${item.image}`} 
+                                            <img src={`${API_URL}uploads/${item.image}`} 
                                             alt={item.productName}
                                             style={{ width: '50px', height:'50px'  }}
                                             />
