@@ -32,7 +32,8 @@ Ensure you have the following installed before setting up the project:
 - **Authentication**: JWT-based authentication for secure login.
 
 ## Screenshots
-_Add screenshots of the app (e.g., home screen, order placement, order tracking)._
+![alt text](image.png)
+
 
 ## Configuration
 1. **Environment Variables**: Ensure that the following environment variables are set:
