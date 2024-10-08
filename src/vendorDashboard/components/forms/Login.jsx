@@ -18,7 +18,7 @@ const Login = ({showWelcomeHandler}) => {
       e.preventDefault();
     setLoading(true); 
       try {
-          const response = await fetch(`${API_URL}vendor/login`, {
+          const response = await fetch(`${API_URL}/vendor/login`, {
             method: 'POST',
             headers:{
               'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ const Login = ({showWelcomeHandler}) => {
           }
           const vendorId = data.vendorId
           console.log("checking for VendorId:",vendorId)
-          const vendorResponse = await fetch(`${API_URL}vendor/single-vendor/${vendorId}`)
+          const vendorResponse = await fetch(`${API_URL}/vendor/single-vendor/${vendorId}`)
           window.location.reload()
           const vendorData = await vendorResponse.json();
           if(vendorResponse.ok){

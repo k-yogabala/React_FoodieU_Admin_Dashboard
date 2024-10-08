@@ -18,7 +18,7 @@ const Register = ({ showLoginHandler }) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when the request starts
     try {
-      const response = await fetch(`${API_URL}vendor/register`, {
+      const response = await fetch(`${API_URL}/vendor/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
